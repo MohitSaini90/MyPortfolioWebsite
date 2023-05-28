@@ -6,68 +6,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
+    <link rel="icon" type="image/png" href="img/Favicon.png">
     <!--CSS File-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- navbar -->
-    <nav class="navbar">
-        <h1 class="logo"></h1>
-        <ul class="nav-links-container">
-            <li class="nav-link"><a href="#home-section" class="links active">Home</a></li>
-            <li class="nav-link"><a href="#about-section" class="links">About</a></li>
-            <li class="nav-link"><a href="#project-section" class="links">Projects</a></li>
-            <li class="nav-link"><a href="#contact-section" class="links">Contact</a></li>
-        </ul>
-        <!--Toggle btn-->
-        <div class="toggle-btn">
-            <span></span>
-            <span></span>
-            <span></span>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <img src="img/title.png" height="28" alt="CoolBrand">
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="#home-section" class="nav-item nav-link links active">Home</a>
+                    <a href="#about-section" class="nav-item nav-link links">About</a>
+                    <a href="#project-section" class="nav-item nav-link links">Project</a>
+                    <a href="#contact-section" class="nav-item nav-link links" tabindex="-1">Contact</a>
+                </div>
+    
+            </div>
         </div>
     </nav>
+    <!--Header Section-->
     <!--Header Section-->
     <header class="header" id="home-section">
         <div class="content">
             <h1 class="header-heading">Hello, I am <span class="brand-name">Mohit <span>Saini</span></span></h1>
             <a href="#contact-section" class="btn">Hire</a>
         </div>
-
+    
         <div class="header-img-container">
             <div class="circle"></div>
             <img src="img/header-img.png" class="header-img" alt="">
-
+    
         </div>
     </header>
-
+    
     <!--About Section-->
     <section id="about-section">
         <h1 class="heading">About Me </h1>
-
+    
         <div class="about-container">
             <div class="image-container">
                 <div class="square"></div>
                 <img src="img/about.png" class="about-img" alt="">
                 <div class="social-links">
-                    <a href="https://github.com/MohitSaini90" target="_blank"><img
-                            src="img/github.png" class="social-img" alt=""></a>
-                    <a href="https://www.instagram.com/mitzz07/" target="_blank"><img
-                            src="img/insta.png" class="social-img" alt=""></a>
-                    <a href="https://www.facebook.com/profile.php?id=100090279665989" target="_blank"><img
-                            src="img/fb.png" class="social-img" alt=""></a>
-                    <a href="https://twitter.com/Mohitsa42024567" target="_blank"><img
-                            src="img/twitter.png" class="social-img" alt=""></a>
-                    <a href="https://www.linkedin.com/in/mohit-saini-9112a9213/" target="_blank"><img
-                            src="img/linked.png" class="social-img" alt=""></a>
+                    <a href="https://github.com/MohitSaini90" target="_blank"><img src="img/github.png" class="social-img"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/mitzz07/" target="_blank"><img src="img/insta.png" class="social-img"
+                            alt=""></a>
+                    <a href="https://www.facebook.com/profile.php?id=100090279665989" target="_blank"><img src="img/fb.png"
+                            class="social-img" alt=""></a>
+                    <a href="https://twitter.com/Mohitsa42024567" target="_blank"><img src="img/twitter.png"
+                            class="social-img" alt=""></a>
+                    <a href="https://www.linkedin.com/in/mohit-saini-9112a9213/" target="_blank"><img src="img/linked.png"
+                            class="social-img" alt=""></a>
                 </div>
             </div>
-
+    
             <!--Info Part-->
             <div class="info">
                 <p>I am Mohit Saini, currently pursuing Electronics and Telecommunications Engineering at Jadavpur
@@ -77,9 +85,9 @@
                 <a href="https://drive.google.com/uc?export=download&id=1Z6iA5WUM5uQvyGpOBfgl1GyFa_lVmXeK"
                     class="btn">Download CV</a>
             </div>
-
+    
         </div>
-
+    
         <!--Skills-->
         <h2 class="sub-heading">Skills</h2>
         <div class="skills">
@@ -94,11 +102,11 @@
             <p class="skill-name">ReactJS</p>
             <p class="skill-name">ExpressJS</p>
         </div>
-
+    
         <!--Time Line-->
         <h2 class="sub-heading">Education and Experience</h2>
         <div class="timeline-container">
-
+    
             <div class="card-container">
                 <div class="card">
                     <h1 class="card-title">Apr 2006-Apr 2018</h1>
@@ -106,7 +114,7 @@
                         year 2018 securing 95.6% in JKBOSE Secondary School Examination</p>
                 </div>
             </div>
-
+    
             <div class="card-container">
                 <div class="card">
                     <h1 class="card-title">Apr 2018-Apr2020</h1>
@@ -114,7 +122,7 @@
                         in the year 2018 securing 96.4% in JKBOSE Secondary School Examination</p>
                 </div>
             </div>
-
+    
             <div class="card-container">
                 <div class="card">
                     <h1 class="card-title">Sep 2020-present</h1>
@@ -122,7 +130,7 @@
                         SGPA 9.02</p>
                 </div>
             </div>
-
+    
             <div class="card-container">
                 <div class="card">
                     <h1 class="card-title">Oct 2021-Jan 2022</h1>
@@ -131,7 +139,7 @@
                         made Fluttr the largest multilingual dating app in Kolkata.</p>
                 </div>
             </div>
-
+    
             <div class="card-container">
                 <div class="card">
                     <h1 class="card-title">June 2021-Jan 2022</h1>
@@ -141,35 +149,35 @@
                 </div>
             </div>
         </div>
-
+    
     </section>
-
+    
     <!--Projects-->
     <section id="project-section">
         <h1 class="project-heading">Projects</h1>
         <div class="project-container">
-
-
+    
+    
             <!--
-            <div class="project-card">
-                <img src="img/project-1.png" class="project-img" alt="">
-                <div class="project-content">
-                    <h1 class="project-title">Project 01</h1>
-                    <p class="project-info">
-                        The machine learning model predicts the real-estate price based on certain characteristics.
-                    </p>
-                    <div class="project-btn-grp">
-                        <a href="https://github.com/MohitSaini90/Real_Estate_model" target="_blank">
-                            <button class="project-btn github">GitHub Repo</button>
-                        </a>
-                        <a href="https://real-estate-model.onrender.com" target="_blank">
-                        <button class="project-btn live">See Live</button>
-                        </a>
+                <div class="project-card">
+                    <img src="img/project-1.png" class="project-img" alt="">
+                    <div class="project-content">
+                        <h1 class="project-title">Project 01</h1>
+                        <p class="project-info">
+                            The machine learning model predicts the real-estate price based on certain characteristics.
+                        </p>
+                        <div class="project-btn-grp">
+                            <a href="https://github.com/MohitSaini90/Real_Estate_model" target="_blank">
+                                <button class="project-btn github">GitHub Repo</button>
+                            </a>
+                            <a href="https://real-estate-model.onrender.com" target="_blank">
+                            <button class="project-btn live">See Live</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
--->
-
+    -->
+    
             <div class="project-card">
                 <img src="img/project-2.png" class="project-img" alt="">
                 <div class="project-content">
@@ -185,30 +193,30 @@
                         <a href="https://crop-recommender-model.onrender.com" target="_blank">
                             <button class="project-btn live">See Live</button>
                         </a>
-
+    
                     </div>
                 </div>
             </div>
             <!--
-            <div class="project-card">
-                <img src="img/project-3.png" class="project-img" alt="">
-                <div class="project-content">
-                    <h1 class="project-title">Project 03</h1>
-                    <p class="project-info">
-                        Personal portfolio website
-                    </p>
-                    <div class="project-btn-grp">
-                        <a href="https://github.com/MohitSaini90/Portfolio-Website" target="_blank">
-                            <button class="project-btn github">GitHub Repo</button>
-                        </a>
-                        <a href="https://portfolio-website-pm3i.onrender.com" target="_blank">
-                        <button class="project-btn live">See Live</button>
-                        </a>
+                <div class="project-card">
+                    <img src="img/project-3.png" class="project-img" alt="">
+                    <div class="project-content">
+                        <h1 class="project-title">Project 03</h1>
+                        <p class="project-info">
+                            Personal portfolio website
+                        </p>
+                        <div class="project-btn-grp">
+                            <a href="https://github.com/MohitSaini90/Portfolio-Website" target="_blank">
+                                <button class="project-btn github">GitHub Repo</button>
+                            </a>
+                            <a href="https://portfolio-website-pm3i.onrender.com" target="_blank">
+                            <button class="project-btn live">See Live</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
--->
-
+    -->
+    
             <div class="project-card">
                 <img src="img/project-4.png" class="project-img" alt="">
                 <div class="project-content">
@@ -228,10 +236,10 @@
                     </div>
                 </div>
             </div>
-
+    
         </div>
     </section>
-
+    
     <!--Contact section-->
     <section id="contact-section">
         <h1 class="heading">Contact</h1>
@@ -247,6 +255,8 @@
             </div>
         </form>
     </section>
+
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
         integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -285,8 +295,11 @@
 
         });
     </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
+
 </body>
 
 </html>
