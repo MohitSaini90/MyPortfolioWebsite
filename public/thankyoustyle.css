@@ -1,0 +1,48 @@
+body {
+    background-color: #F5F5F5;
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#message {
+    background-color: #FFFFFF;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #BBBBBB;
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+#back-button {
+    display: inline-block;
+    background-color: #333;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+#back-button:hover {
+    background-color: #555;
+    cursor: pointer;
+}
