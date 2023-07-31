@@ -8,6 +8,7 @@ const path = require("path");
 const nodemailer = require("nodemailer");
 
 // Middleware configuration
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "public")));
@@ -22,22 +23,21 @@ const authRouter = express.Router();
 app.use("/", authRouter);
 authRouter
   .route("") //final route
-  .get(getsignUp)
-  .post(postsignUp); // to get data from frontend
-
-function getsignUp(req, res) {
+  .get(homePage)
+  .post(contactForm); // to get data from frontend
+authRouter.route("/thankyou").get(getThankyouPage);
+function getThankyouPage(req, res) {
+  res.sendFile("thankyou.html", { root: __dirname });
+}
+function homePage(req, res) {
   res.sendFile("index.html", { root: __dirname });
 }
-function postsignUp(req, res) {
-  console.log(req.body);
-
-  const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false, // true for 465, false for other ports
+function contactForm(req, res) {
+  var transporter = nodemailer.createTransport({
+    service: "gmail",
     auth: {
-      user: "mohitsainidna@gmail.com", // generated ethereal user
-      pass: "useuenroydavufpu", // generated ethereal password
+      user: "mohitsainidna@gmail.com",
+      pass: "useuenroydavufpu",
     },
   });
 
@@ -48,13 +48,12 @@ function postsignUp(req, res) {
     text: `Name: ${req.body.Username}\nEmail: ${req.body.email}\nSubject: ${req.body.subject}\nMessage: ${req.body.message} `,
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
+  transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
       console.log(error);
-      res.send("Error");
     } else {
-      console.log("Email sent:" + info.response);
-      res.send("Success");
+      console.log("Email sent: " + info.response);
+      res.status(200).redirect("/thankyou");
     }
   });
 }
