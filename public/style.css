@@ -535,7 +535,7 @@ textarea{
             text-align: center;
     }
     .project-btn-grp{
-    margin-left: 100px;
+    margin-left: 60px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
