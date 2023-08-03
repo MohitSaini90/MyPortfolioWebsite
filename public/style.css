@@ -534,6 +534,37 @@ textarea{
             line-height: 30px;
             text-align: center;
     }
+    .project-btn-grp{
+    margin-left: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.project-btn{
+    height: 30px;
+    text-transform: capitalize;
+    font-size: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20%;
+}
+
+.project-btn.live{
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 20%;
+}
+
+.project-card:hover .project-img{
+    filter: blur(20px);
+}
+
+.project-card:hover .project-content{
+    opacity: 1;
+}
 }
 
 /*small screen*/
@@ -647,7 +678,7 @@ textarea{
 }
         .project-info {
             margin: 20px;
-            font-size: 10px;
+            font-size: 14px;
             line-height: 30px;
             text-align: center;
         }
